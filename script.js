@@ -1,30 +1,34 @@
-
 let decrementBtn = document.querySelector("#decrementBtn");
 let incrementBtn = document.querySelector("#incrementBtn");
-let incrementButt = document.querySelector(".incrementButton")
 let p = document.querySelector("#p");
-let resetBtn = document.querySelector("#reset")
-let selectBtn = document.querySelector("#select")
-let result = document.querySelector("#result")
+let resetBtn = document.querySelector("#reset");
+let selectBtn = document.querySelector("#select");
+
 let count = 0;
+let step = 1; // default step
 
 function decrementStep() {
-  count--;
+ if(count<=0) return null
+  count -= step;
   p.textContent = count;
 }
 
 function incrementStep() {
-  count++;
+  count += step;
   p.textContent = count;
 }
 
 function resetFnc() {
-  let alrt = alert("Confirm Reset:\nYou're about to reset the counter to 0")
-  count = 0
-  p.textContent = count
+  alert("Confirm Reset:\nYou're about to reset the counter to 0");
+  count = 0;
+  p.textContent = count;
 }
 
-// incrementButt.addEventListener("click", incrementButtons)
-resetBtn.addEventListener("click", resetFnc)
+function changeStep() {
+  step = parseInt(this.value);
+}
+
+selectBtn.addEventListener("change", changeStep);
+resetBtn.addEventListener("click", resetFnc);
 incrementBtn.addEventListener("click", incrementStep);
 decrementBtn.addEventListener("click", decrementStep);
