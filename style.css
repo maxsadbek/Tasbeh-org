@@ -65,6 +65,49 @@ button {
     font-weight: 600;
 }
 
-#incrementBtn{
-    width: 1005;
+#incrementBtn {
+    font-size: 160px;
+    padding: 40px 50px;
+    border-radius: 100%;
+    background-color: #01301c;
+    color: #00ea86;
+    border: none;
+    font-weight: 100;
+    transition: all 0.1s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#incrementBtn:active {
+    outline: 6px solid #18bd76;
+    outline-offset: -6px;
+    background-color: #00ea8564;
+}
+
+#decrementBtn {
+    font-size: 60px;
+    padding: 20px 20px;
+    border-radius: 100%;
+    background-color: #01301c;
+    color: #00ea86;
+    border: none;
+    font-weight: 100;
+    transition: all 0.1s ease;
+    position: absolute;
+    top: 70%;
+    left: 46.35%;
+    box-sizing: border-box;
+    box-shadow: inset 0 8px 0 #000;
+    transition: background-color 0.5s ease,
+        box-shadow 0.5s ease,
+        transform 0.5s ease,
+        border 0.5s ease;
+}
+
+
+#decrementBtn:active {
+    outline: 6px solid #18bd76;
+    outline-offset: -6px;
+    background-color: #00ea8564;
+    box-shadow: 0 0 0;
 }
