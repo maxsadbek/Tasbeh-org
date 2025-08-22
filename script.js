@@ -5,7 +5,7 @@ let resetBtn = document.querySelector("#reset");
 let selectBtn = document.querySelector("#select");
 
 let count = 0;
-let step = 1; // default step
+let step = 1;
 
 function decrementStep() {
  if(count<=0) return null
