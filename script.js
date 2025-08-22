@@ -8,7 +8,7 @@ let count = 0;
 let step = 1;
 
 function decrementStep() {
- if(count<=0) return null
+  if (count <= 0) return null
   count -= step;
   p.textContent = count;
 }
@@ -19,9 +19,13 @@ function incrementStep() {
 }
 
 function resetFnc() {
-  alert("Confirm Reset:\nYou're about to reset the counter to 0");
-  count = 0;
-  p.textContent = count;
+  let promt = prompt("Are you sure you want to start over?");
+  switch (promt) {
+    case "yes":
+      count = 0;
+      p.textContent = count;
+  }
+  
 }
 
 function changeStep() {
