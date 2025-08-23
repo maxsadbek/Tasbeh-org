@@ -188,14 +188,13 @@ button {
         border-radius: 100%;
         background-color: #01301c;
         color: #00ea86;
-        border: none;
         font-weight: 100;
         transition: all 0.1s ease;
         position: absolute;
         top: 72%;
         left: 37%;
         box-sizing: border-box;
-        box-shadow: inset 0 8px 0 #000;
+        border: 8px solid #000;
         transition: background-color 0.5s ease,
             box-shadow 0.5s ease,
             transform 0.5s ease,
